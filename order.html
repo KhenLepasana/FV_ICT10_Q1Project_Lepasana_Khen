@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>The FoodFather - Order Now</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css">
+    <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
+    <style>
+
+        body {
+            padding-top: 70px;
+            background-image: url('https://thumbs.dreamstime.com/b/pizza-seamless-pattern-vector-pizza-pattern-abstract-background-background-useful-restaurant-identity-packaging-89205691.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+
+        .overlay {
+            background-color: rgba(255, 255, 255, 0.85);
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+
+        .navbar {
+            background-color: #218c00;
+        }
+
+        .nav-link {
+            color: white;
+        }
+
+        .nav-link:hover {
+            color: #cd0000;
+        }
+
+
+        h2 {
+            color: #cd0000;
+            text-align: center;
+            margin-bottom: 20px;
+            font-family: Corleone, sans-serif;
+        }
+
+ 
+        .btn-primary {
+            background-color: #cd0000;
+            border-color: #cd0000;
+        }
+
+        .btn-primary:hover {
+            background-color: #218c00;
+            border-color: #218c00;
+            color: white;
+        }
+
+        .btn-secondary {
+            background-color: #218c00;
+            border-color: #218c00;
+            color: white;
+        }
+
+        .btn-secondary:hover {
+            background-color: #cd0000;
+            border-color: #cd0000;
+            color: white;
+        }
+
+
+        #output {
+            white-space: pre-line;
+            border: 1px solid #218c00;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar, taken from old projects -->
+    <nav class="navbar navbar-expand-md navbar-primary fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <img id="logo" src="https://cdn.discordapp.com/attachments/1049482267933806604/1424631771026427965/BZRmz7i4U3IuAAAAAElFTkSuQmCC.png?ex=68e4a73a&is=68e355ba&hm=d5ebe0d2956d7733db6d1b4d685d90b25c07eac513b132db7244cbb18c4134f0&" width="60" height="30">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="order.html"><b>Order Now</b></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contactus.html"><b>Contact Us</b></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html"><b>Home</b></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main container with overlay -->
+    <div class="container mt-4 overlay">
+        <!-- Page title -->
+        <h2 style="font-family: Corleone;">The FoodFather - Order Now!</h2>
+
+        <!-- Customer information section -->
+        <h4>Customer Information</h4>
+        <label>Name:</label>
+        <input id="name" class="form-control mb-2" type="text">
+        <label>Address:</label>
+        <input id="address" class="form-control mb-2" type="text">
+        <label>Contact Number:</label>
+        <input id="contact" class="form-control mb-4" type="number">
+
+        <!-- Food items selection -->
+        <h4>Select Food Items</h4>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="item1">
+            <label class="form-check-label">Truffle Pasta - ₱320</label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="item2">
+            <label class="form-check-label">Cheese Pizza - ₱250</label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="item3">
+            <label class="form-check-label">Caesar Salad - ₱150</label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="item4">
+            <label class="form-check-label">Iced Latte - ₱80</label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="item5">
+            <label class="form-check-label">Fresh Lemonade - ₱60</label>
+        </div>
+
+        <!-- Submit button -->
+        <br>
+        <button class="btn btn-primary" py-click="generate_order">Create Order</button>
+
+        <!-- Output area -->
+        <div id="output" class="mt-3"></div>
+
+        <!-- Footer -->
+        <br><br>
+        <center>
+            <p>© 2025 FoodFather Company</p>
+        </center>
+    </div>
+
+    <!-- PyScript for handling order -->
+    <script type="py" src="main.py"></script>
+</body>
+</html>

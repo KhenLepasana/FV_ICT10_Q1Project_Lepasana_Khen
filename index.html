@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>The FoodFather - Menu</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css">
+    <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
+    <style>
+        body {
+            padding-top: 70px;
+            background-image: url('https://thumbs.dreamstime.com/b/pizza-seamless-pattern-vector-pizza-pattern-abstract-background-background-useful-restaurant-identity-packaging-89205691.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .overlay {
+            background-color: rgba(255, 255, 255, 0.85);
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .navbar {
+            background-color: #218c00;
+        }
+
+        .nav-link {
+            color: white;
+        }
+
+        .nav-link:hover {
+            color: #cd0000;
+        }
+
+        .title h2 {
+            color: #cd0000;
+            font-family: 'Corleone', sans-serif;
+        }
+
+        .table {
+            border: 1px solid #218c00;
+        }
+
+        .btn-success {
+            background-color: #cd0000;
+            border-color: #cd0000;
+        }
+
+        .btn-success:hover {
+            background-color: #218c00;
+            border-color: #218c00;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar, taken from old projects -->
+    <nav class="navbar navbar-expand-md navbar-primary fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand"  href="index.html">
+                <img id="logo" src="https://cdn.discordapp.com/attachments/1049482267933806604/1424631771026427965/BZRmz7i4U3IuAAAAAElFTkSuQmCC.png?ex=68e4a73a&is=68e355ba&hm=d5ebe0d2956d7733db6d1b4d685d90b25c07eac513b132db7244cbb18c4134f0&" width="60" height="30">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">  
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="order.html"><b>Order Now</b></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contactus.html"><b>Contact Us</b></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html"><b>Home</b></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Container / Overlay -->
+    <div class="container mt-4 overlay">
+        <!-- Title Section -->
+        <div class="text-center title">
+            <h2 style="font-family: Corleone;">The FoodFather</h2>
+            <p>Owner: Khen Lepasana</p>
+            <p>Since 2025</p>
+        </div>
+
+        <!-- Menu Table -->
+        <h4>Menu Pricelist</h4>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Product Name</th>
+                    <th>Price (₱)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Truffle Pasta</td>
+                    <td>₱320.00</td>
+                </tr>
+                <tr>
+                    <td>Cheese Pizza</td>
+                    <td>₱250.00</td>
+                </tr>
+                <tr>
+                    <td>Caesar Salad</td>
+                    <td>₱150.00</td>
+                </tr>
+                <tr>
+                    <td>Iced Latte</td>
+                    <td>₱80.00</td>
+                </tr>
+                <tr>
+                    <td>Fresh Lemonade</td>
+                    <td>₱60.00</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Additional Info -->
+        <p><b>Business Hours:</b> 10:00 AM - 9:00 PM</p>
+        <p><b>Delivery Available:</b> Yes</p>
+        <p><b>Common Allergens:</b> Nuts, Dairy, Gluten</p>
+        <p><b>Tax Rate:</b> 8%</p>
+
+        <!-- Order Button -->
+        <div class="text-center">
+            <a href="order.html" class="btn btn-success btn-lg">Order Now</a>
+        </div>
+
+        <!-- Footer -->
+        <center>
+            <p>© 2025 FoodFather Company</p>
+        </center>
+    </div>
+
+</body>
+</html>
